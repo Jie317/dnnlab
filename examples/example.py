@@ -9,10 +9,7 @@ def build_dnn_model(model_name, max_feature, input_length):
         # multilayer perceptrons
         if model_name == 'mlp':
             model = Sequential()
-            model.add(Embedding(max_feature, 16, input_length=input_length))
-            model.add(Flatten())
-            model.add(Dense(128, activation='relu'))
-            model.add(Dense(64, activation='relu'))
+            model.add(Dense(128, activation='relu', input_length=input_length))
             model.add(Dense(1, activation='sigmoid'))
 
         model.compile(
@@ -33,14 +30,12 @@ def build_dnn_model(model_name, max_feature, input_length):
 
     """
 
-    from keras.models import Sequential, Model
-    from keras.layers import Dense, Embedding, Flatten
+    from keras.models import Sequential
+    from keras.layers import Dense
     # multilayer perceptrons
     if model_name == 'mlp':
         model = Sequential()
-        model.add(
-            Dense(32 * 20, activation='relu', input_shape=(input_length, )))
-        model.add(Dense(64, activation='relu'))
+        model.add(Dense(128, activation='relu', input_shape=(input_length, )))
         model.add(Dense(1, activation='sigmoid'))
 
     model.compile(

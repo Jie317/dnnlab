@@ -14,10 +14,7 @@ An end-to-end framework for in-production usage to test Deep Learning models on 
 ```shell
 sudo apt-get update 
 sudo apt-get install python3-pip
-git clone git@gitlab.tabmo.net:data-science/deep-learning-ctr-prediction.git
-cd deep-learning-ctr-prediction
-git checkout dnnlab
-sudo python3 setup.py install
+sudo pip3 install dnnlab (Not avaliable)
 sudo pip3 install -r requirements.txt
 ```
 
