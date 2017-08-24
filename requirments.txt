@@ -1,0 +1,11 @@
+keras>=2.0.6
+six>=1.10
+imblearn
+pandas
+pyarrow
+matplotlib
+xgboost
+sklearn
+graphviz
+h5py
+logmatic-python

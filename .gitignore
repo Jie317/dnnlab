@@ -1,0 +1,14 @@
+dnnlab/*~
+dnnlab/.*
+dnnlab/target/
+dnnlab/__pycache__/
+dnnlab/results/
+
+# after installing
+dist/
+dnnlab.egg-info/
+*.egg/
+build/
+
+
+
