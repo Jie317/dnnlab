@@ -1,6 +1,6 @@
-### Dnnlab experiment version 
+### DNNLab
 
-An end-to-end framework for in-production usage to test Deep Learning models on common Machine Learning tasks, such as binary classification.
+An end-to-end framework for in-production experiments on Deep Learning models for binary classification task on sequetial data.
 
 
 #### Usage on a complete new machine
@@ -14,7 +14,9 @@ An end-to-end framework for in-production usage to test Deep Learning models on 
 ```shell
 sudo apt-get update 
 sudo apt-get install python3-pip
-sudo pip3 install dnnlab (Not avaliable)
+# checkout this repository
+# in the root folder, run
+sudo python3 setup.py install
 sudo pip3 install -r requirements.txt
 ```
 
@@ -27,7 +29,7 @@ sudo pip3 install -r requirements.txt
 
 - It provides two main arguments, through which user-defined functions can be passed to pre-process data and build neural networks. Data preprocessing and model construction are two core steps to tune DNN models. By passing user-defined functions, users have full control over how the data should be processed before being fed to model, and how the neural layers is built.
 
-- A set of built-in functions can automatically calculate most prevailing evaluation metrics for binary classification models, such as F-measure, Logloss (Logarithmic loss), AUROC (Area Under the Receiver Operating Characteristic curve), Precision-recall curve, and etc. The metric scores for those who have only scalar values will be recorded in a file named ``results.csv", while other metrics will be registered as pictures or Excel files.
+- A set of built-in functions can automatically calculate most prevailing evaluation metrics for binary classification models, such as F-measure, Logloss (Logarithmic loss), AUROC (Area Under the Receiver Operating Characteristic curve), Precision-recall curve, and etc. The metric scores for those who have only scalar values will be recorded in a csv file, while other metrics will be registered as pictures or Excel files.
 
 - TensorBoard, a tool to visualize training phase, is adapted to track train loss by batches of sample. This fine-grained visualization also allows to check model's performance on validation data within each training epoch. When dealing with too large data, this may help to find early stop point within the epoch and save training time. 
 
