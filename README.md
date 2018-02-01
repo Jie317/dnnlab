@@ -1,9 +1,11 @@
 ### DNNLab
 
-An end-to-end framework for in-production experiments on Deep Learning models for binary classification task on sequetial data.
+An end-to-end framework to experiment Deep Learning models on binary classification tasks that involve large-scale sequential data, e.g. Click-through Rate (CTR) prediction in [RTB](https://en.wikipedia.org/wiki/Real-time_bidding) system. It meticulously takes care of any process other than model creation and data preprocessing, so that you can focus on model construction, parameter tuning and data preprocessing. 
+
+This framework is developped with a set of platforms featured in data structures, data analysis and deep learning models construction, such as [Keras](https://keras.io/), [Tensorflow](https://www.tensorflow.org/), [Pandas](http://pandas-docs.github.io/pandas-docs-travis/), [PyArrow](https://arrow.apache.org/docs/python/), [Sklearn](http://scikit-learn.org/stable/documentation.html), etc.
 
 
-#### Usage on a complete new machine
+#### Usage on a Linux system
 
 - Install CUDA and cudnn.
 
@@ -25,9 +27,9 @@ sudo pip3 install -r requirements.txt
 
 
 #### Main Features
-- It allows to run huge data on small memory (e.g., RAM < 12G). There is no limit on how many data can be used to train the model, with the implementation of several generator functions. At present, there are only two formats of data files are supported, i.e., CSV and parquet.
+- It allows to run huge data on small memory (e.g., RAM < 12G). There is no limit on how many data can be used to train the model, due to the implementation of several generator functions. At present, there are only two data formats are supported, i.e., CSV and parquet.
 
-- It provides two main arguments, through which user-defined functions can be passed to pre-process data and build neural networks. Data preprocessing and model construction are two core steps to tune DNN models. By passing user-defined functions, users have full control over how the data should be processed before being fed to model, and how the neural layers is built.
+- It provides two main arguments, through which user-defined functions can be passed to pre-process data and build neural networks. Data preprocessing and model construction are two core steps to work with DNN models. By passing user-defined functions, users have full control over how the data should be processed before being fed to model, and how the neural layers is built.
 
 - A set of built-in functions can automatically calculate most prevailing evaluation metrics for binary classification models, such as F-measure, Logloss (Logarithmic loss), AUROC (Area Under the Receiver Operating Characteristic curve), Precision-recall curve, and etc. The metric scores for those who have only scalar values will be recorded in a csv file, while other metrics will be registered as pictures or Excel files.
 
