@@ -1,11 +1,12 @@
-### DNNLab
-
+# DNNLab
+![LOGO](https://drive.google.com/file/d/1r7w1PHyx7IwQCxA_apB4pdP_N7hMtZBe/view?usp=sharing)
 An end-to-end framework to experiment Deep Learning models on binary classification tasks that involve large-scale sequential data, e.g. Click-through Rate (CTR) prediction in [RTB](https://en.wikipedia.org/wiki/Real-time_bidding) system. It meticulously takes care of any process other than model creation and data preprocessing that a complete experiment may need, so that you can focus on model construction, parameter tuning and data preprocessing. 
 
 This framework is developped with a set of platforms featured in data structures, data analysis and deep learning models construction, such as [Keras](https://keras.io/), [Tensorflow](https://www.tensorflow.org/), [Pandas](http://pandas-docs.github.io/pandas-docs-travis/), [PyArrow](https://arrow.apache.org/docs/python/), [Sklearn](http://scikit-learn.org/stable/documentation.html), etc.
 
+----------------
 
-#### Usage on a Linux system
+## Installation
 
 - Install CUDA and cudnn.
 
@@ -24,9 +25,9 @@ sudo pip3 install -r requirements.txt
 
 - Run `python3 example.py -h` under the folder `examples/` to check the usage of arguments. Try this to run an example: `python3 example.py --dc dataset_samples/-3-1-1 -m mlp --fmt csv --mf 10000 --label label`
 
+-------------------
 
-
-#### Main Features
+## Main Features
 - It allows to run huge data on small memory (e.g., RAM < 12G). There is no limit on how many data can be used to train the model, due to the implementation of several generator functions. At present, there are only two data formats are supported, i.e., CSV and parquet.
 
 - It provides two main arguments, through which user-defined functions can be passed to pre-process data and build neural networks. Data preprocessing and model construction are two core steps to work with DNN models. By passing user-defined functions, users have full control over how the data should be processed before being fed to model, and how the neural layers are built.
